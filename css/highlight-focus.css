@@ -1,0 +1,14 @@
+.no-outline :focus {
+    outline: medium none !important;
+}
+#highlight-focus {
+    position: absolute;
+    margin: 0;
+    z-index: -1;
+    border-radius: 2px;
+    visibility: hidden;
+}
+#highlight-focus.highlight-focus-visible {
+    visibility: visible;
+    z-index: 9999;
+}
