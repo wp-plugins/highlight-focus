@@ -3,7 +3,7 @@
 Plugin Name: Highlight Focus
 Plugin URI: http://www.juzed.fr/
 Description: Highlight Focus on tab key pressed 
-Version: 1.0 
+Version: 1.1 
 Author: Julien Zerbib,  Audrey Vittecoq-Laporte
 Author URI: http://www.juzed.fr/
   

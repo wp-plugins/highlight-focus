@@ -3,7 +3,7 @@ Contributors: Julien Zerbib,  Audrey Vittecoq-Laporte
 Tags: highlight, focus, accessibility
 Requires at least: 3.5
 Tested up to: 3.8
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,5 +43,10 @@ No, your site has to be accessible so it can keep his accessibility level when t
 3. Focused Element Hilighted.
 
 == Changelog ==
+= 1.1 =
+* Stable version.
+* Admin bug correction.
+
 = 1.0 =
+* Previous Stable version.
 * Initial release.

@@ -55,22 +55,26 @@ class Highlight_Focus_Settings {
     * Register Settings
     */
     public function write_css() {
-        $css_content = '#highlight-focus {';
-        
-        $bg_color = hex2rgba( get_option( 'highlight_focus_background_color', '#0074A2' ), get_option( 'highlight_focus_background_opacity', 0.4 ) );
-        $border_color = hex2rgba( get_option( 'highlight_focus_border_color', '#0074A2' ), get_option( 'highlight_focus_border_opacity', 0.8 ) );        
-        
-        $css_content .= 'box-shadow: 0 0 2px 3px ' . $border_color . ', 0 0 2px ' . $border_color . ' inset;';
-        $css_content .= 'background-color: ' . $bg_color . ';';
-        
-        $css_content .= '}';    
-             
-        if( !is_dir( HighlightFocus_UPLOAD_PATH ) )
-            mkdir( HighlightFocus_UPLOAD_PATH );
+
+        if( isset( $_GET[ 'page' ] ) && 'highlight_focus' == $_GET[ 'page' ] && isset( $_GET[ 'settings-updated' ] ) && 'true' == $_GET[ 'settings-updated' ] ) {
+            $css_content = '#highlight-focus {';
             
-        $css_file = fopen( HighlightFocus_UPLOAD_PATH . 'highlight-focus-custom.css', 'w' );
-        fwrite( $css_file, $css_content );
-        fclose( $css_file );    
+            $bg_color = hex2rgba( get_option( 'highlight_focus_background_color', '#0074A2' ), get_option( 'highlight_focus_background_opacity', 0.4 ) );
+            $border_color = hex2rgba( get_option( 'highlight_focus_border_color', '#0074A2' ), get_option( 'highlight_focus_border_opacity', 0.8 ) );        
+            
+            $css_content .= 'box-shadow: 0 0 2px 3px ' . $border_color . ', 0 0 2px ' . $border_color . ' inset;';
+            $css_content .= 'background-color: ' . $bg_color . ';';
+            
+            $css_content .= '}';    
+                 
+            if( !is_dir( HighlightFocus_UPLOAD_PATH ) )
+                mkdir( HighlightFocus_UPLOAD_PATH );
+                
+            $css_file = fopen( HighlightFocus_UPLOAD_PATH . 'highlight-focus-custom.css', 'w' );
+            fwrite( $css_file, $css_content );
+            fclose( $css_file );  
+        }
+          
     } // END public function write_css
 
     /**
