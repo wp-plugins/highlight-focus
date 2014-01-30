@@ -36,7 +36,7 @@ It follows the WCAG (Web Content Accessibility Guidelines) to at least level 'A'
 = If my website is not accessible, does it make it accessible? =
 No, your site has to be accessible so it can keep his accessibility level when the plugin is added.
 
-= I just changes my settings and there is no modification on front, is it normal? =
+= I just changed my settings and there is no modification on front, is it normal? =
 Yes, you have to empty your caches to see any modification of the settings.
 
 == Screenshots ==
